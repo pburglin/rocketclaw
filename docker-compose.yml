@@ -1,0 +1,10 @@
+services:
+  rocketclaw:
+    build: .
+    image: rocketclaw:local
+    stdin_open: true
+    tty: true
+    environment:
+      - ROCKETCLAW_HOME=/home/rocket/.rocketclaw
+    volumes:
+      - ./.rocketclaw:/home/rocket/.rocketclaw
